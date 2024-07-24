@@ -1,7 +1,8 @@
 <template>
-  <div>
+  <div class="h-screen flex justify-between flex-col">
     <!-- <NuxtPage /> -->
-    <NuxtRouteAnnouncer />
+    <!-- <NuxtRouteAnnouncer /> -->
+    <!-- <div class="text-red-500">Hello tailwind CSS!</div> -->
     <NuxtWelcome />
   </div>
 </template>
