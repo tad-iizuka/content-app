@@ -1,7 +1,7 @@
 <!-- pages/example.vue -->
 <template>
   <div class="flex justify-center items-center">
-    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div v-if="path" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <!-- <a href="#"> -->
             <img class="rounded-t-lg" :src="`${ $config.app.baseURL }` + path" alt="" />
         <!-- </a> -->
@@ -23,11 +23,13 @@
 
 <script setup>
 // const { content } = await import('~/assets/content.json')
-  const path = ref('/img/daikon_radish.png');
+  const path = ref('');
   const route = useRoute()
-  // console.log(route.query.id)
-  const users = await import(`~/assets/content.json`)
-  path.value = users.default[route.query.id].image
+  if (route.query.id) {
+    console.log(route.query.id)
+    const users = await import(`~/assets/content.json`)
+    path.value = users.default[route.query.id].image
+  }
   // console.log(path.value)
   // asyncData() {
   //   const users = require(`~/assets/users.json`)
