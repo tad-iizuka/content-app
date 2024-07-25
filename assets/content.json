@@ -1,0 +1,17 @@
+[
+	{
+		"id" : 1,
+		"name": "ブロッコリー",
+		"image": "/img/broccoli.png"
+	},
+	{
+		"id" : 2,
+		"name": "大根（だいこん）",
+		"image": "/img/daikon_radish.png"
+	},
+	{
+		"id" : 3,
+		"name": "白菜（はくさい）",
+		"image": "/img/hakusai.png"
+	}
+]
