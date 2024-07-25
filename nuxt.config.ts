@@ -10,5 +10,8 @@ export default defineNuxtConfig({
     baseURL: '/content-app/',
   },
   compatibilityDate: '2024-07-24',
-  modules: ["@nuxtjs/tailwindcss"]
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@pinia/nuxt'
+  ]
 })
