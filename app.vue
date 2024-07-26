@@ -1,8 +1,13 @@
 <template>
   <div class="h-screen flex justify-between flex-col">
     <NuxtPage />
-    <!-- <NuxtRouteAnnouncer /> -->
-    <!-- <div class="text-red-500">Hello tailwind CSS!</div> -->
-    <!-- <NuxtWelcome /> -->
   </div>
 </template>
+<script setup lang="ts">
+  onMounted(() => {
+    if (localStorage.getItem("Key") == 'undefined' || localStorage.getItem("Key") == null ) {
+      const value = JSON.parse(JSON.stringify([]))
+      localStorage.setItem("Key", JSON.stringify(value))
+    }
+  })
+</script>
